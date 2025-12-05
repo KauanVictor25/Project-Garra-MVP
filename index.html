@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GARRA - Manutenção</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              garra: {
+                bg: '#1a202c',
+                card: '#2d3748',
+                accent: '#ed8936',
+                text: '#f7fafc',
+                success: '#48bb78',
+                warning: '#ecc94b',
+                danger: '#f56565',
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #1a202c;
+        color: #f7fafc;
+        font-family: 'Inter', sans-serif;
+      }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #1a202c; }
+      ::-webkit-scrollbar-thumb { background: #2d3748; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #ed8936; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>
