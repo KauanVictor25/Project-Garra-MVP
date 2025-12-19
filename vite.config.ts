@@ -7,7 +7,8 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
+      // Ajuste seguro para funcionar em Windows/Linux sem erro de __dirname
+      "@": path.resolve(process.cwd(), "./src"),
     },
   },
 })

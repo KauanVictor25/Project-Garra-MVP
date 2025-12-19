@@ -35,19 +35,20 @@ export interface ServiceOrder {
   priority: OSPriority;
   status: OSStatus;
   
-  // Histórico
+  // Histórico (Visita Anterior)
   lastVisitDate: string;
-  lastVisitTechnician: string; // Quem foi
-  lastVisitPhotoUrl: string;   // Foto do serviço
-  serviceName: string;         // O que foi feito (Ex: Troca de Tubulação)
+  lastVisitTechnician: string;
+  lastVisitPhotoUrl: string;       // Foto 1 (Principal)
+  lastVisitSecondPhotoUrl?: string; // Foto 2 (Secundária) - NOVO CAMPO
+  serviceName: string;
 
   // Execução Atual
   solutionApplied?: string;
   partsUsed?: string;
   healthStatus?: 'green' | 'yellow' | 'red';
   photos?: OSPhoto[];
-  completionDate?: string;
   technicianName?: string;
+  completionDate?: string;
 }
 
 export interface Technician {
